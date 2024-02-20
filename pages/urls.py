@@ -7,5 +7,6 @@ urlpatterns = [
     path('/contact', ContactPageView.as_view(), name='contact'),
     path('products/', ProductIndexView.as_view(), name='index'), 
     path('products/create', ProductCreateView.as_view(), name='form'), 
-    path('products/<str:id>', ProductShowView.as_view(), name='show'), 
+    path('products/<str:id>', ProductShowView.as_view(), name='show'),
+    path('product/created/', ProductCreateView.product_created, name='product_created'), 
 ]
